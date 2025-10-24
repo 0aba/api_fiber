@@ -25,6 +25,10 @@ PASSWORD_DB="example"
 SSLMODE_DB="disable"   # Choice from: "disable" and "enable"
 ```
 
+## Структура базы данных
+Структура базы данных для работы API указана в `src/sql/init_database.sql`.
+
+
 <pre>
 ---------------[meow]---------------
 ───▐▀▄──────▄▀▌───▄▄▄▄▄▄▄─────────── 
