@@ -23,7 +23,6 @@ NAME_DB="example"
 USER_DB="example"
 PASSWORD_DB="example"
 SSLMODE_DB="disable"   # Choice from: "disable" and "enable"
-# 
 ```
 
 <pre>
