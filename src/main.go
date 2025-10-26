@@ -51,7 +51,7 @@ func main() {
 
 	v1 := api.Group("/v1", middlewares.SetHeaderV1Middleware)
 
-	v1.Get("/new-user", handlers_v1.CreateUser)
+	v1.Post("/new-user", handlers_v1.CreateUser)
 	v1.Patch("/update-common-data-user", handlers_v1.UpdateCommonDataUser)
 	v1.Patch("/update-password-user", handlers_v1.UpdatePasswordUser)
 	v1.Delete("/disable-user", handlers_v1.DisableUser)

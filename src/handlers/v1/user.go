@@ -76,7 +76,7 @@ func checkExistsUserWithPassword(db *database.DB, checkUsername string, checkPas
 // Тело запроса: RegisterRequest.
 //
 // Коды статуса ответа:
-//   - 200: пользователь успешно создан
+//   - 201: пользователь успешно создан
 //   - 400: невалидные данные запроса
 //   - 500: внутренняя ошибка сервера
 func CreateUser(c *fiber.Ctx) error {
@@ -119,7 +119,7 @@ func CreateUser(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.Status(200).JSON(validators_response.EmptySuccessfulResponse{})
+	return c.Status(201).JSON(validators_response.EmptySuccessfulResponse{})
 }
 
 // UpdateCommonDataUser обновляет общие данные пользователя.
@@ -127,7 +127,7 @@ func CreateUser(c *fiber.Ctx) error {
 // Тело запроса: CommonDataUpdateRequest.
 //
 // Коды статуса ответа:
-//   - 201: данные успешно обновлены
+//   - 200: данные успешно обновлены
 //   - 400: невалидные данные запроса
 //   - 401: неверный пароль
 //   - 404: пользователь не найден
@@ -179,7 +179,7 @@ func UpdateCommonDataUser(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.Status(201).JSON(validators_response.EmptySuccessfulResponse{})
+	return c.Status(200).JSON(validators_response.EmptySuccessfulResponse{})
 }
 
 // UpdatePasswordUser обновляет пароль пользователя.
@@ -187,7 +187,7 @@ func UpdateCommonDataUser(c *fiber.Ctx) error {
 // Тело запроса: PasswordUpdateRequest.
 //
 // Коды статуса ответа:
-//   - 201: пароль успешно обновлен
+//   - 200: пароль успешно обновлен
 //   - 400: невалидные данные запроса
 //   - 401: неверный текущий пароль
 //   - 404: пользователь не найден
@@ -238,7 +238,7 @@ func UpdatePasswordUser(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.Status(201).JSON(validators_response.EmptySuccessfulResponse{})
+	return c.Status(200).JSON(validators_response.EmptySuccessfulResponse{})
 }
 
 // DisableUser отключает пользователя (помечает как disabled и далее он как-будто удален).
